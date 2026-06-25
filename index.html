@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -51,6 +52,44 @@
       color: #f5c542;
     }
 
+    /* Carrusel */
+    .carousel {
+      width: 100%;
+      max-width: 900px;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 2px solid #f5c542;
+      box-shadow: 0 0 15px rgba(245, 197, 66, 0.3);
+    }
+
+    .carousel-track {
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite;
+    }
+
+    .carousel-track img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0%, 30% {
+        transform: translateX(0);
+      }
+      33%, 63% {
+        transform: translateX(-100%);
+      }
+      66%, 96% {
+        transform: translateX(-200%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
     .container {
       max-width: 900px;
       margin: auto;
@@ -94,6 +133,15 @@
   <a href="#mundial">Mundiales</a>
 </nav>
 
+<!-- Carrusel de imágenes -->
+<div class="carousel">
+  <div class="carousel-track">
+    <img src="fotbol.jpg" alt="Historia del fútbol">
+    <img src="fotbol2.jpg" alt="Partido de fútbol">
+    <img src="fotbol3.jpg" alt="Copa del Mundo">
+  </div>
+</div>
+
 <div class="container">
 
   <div class="card" id="origen">
@@ -129,3 +177,4 @@
 
 </body>
 </html>
+```
